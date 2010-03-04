@@ -1,2 +1,6 @@
+0.0200 2010-03-03
+- Added support for 'package', 'file', and 'namespace'.
+- Changed 'folder' to 'directory', but kept 'folder' as a deprecated alias for backward compatibility.
+
 0.0100 2010-03-03
 - Initial public release.
