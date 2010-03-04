@@ -1,3 +1,6 @@
+0.0300 2010-03-03
+- With Ricardo's guidance, added aliasing for config file directives.
+
 0.0200 2010-03-03
 - Added support for 'package', 'file', and 'namespace'.
 - Changed 'folder' to 'directory', but kept 'folder' as a deprecated alias for backward compatibility.
