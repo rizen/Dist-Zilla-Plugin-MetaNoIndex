@@ -4,7 +4,7 @@ use Moose;
 use Moose::Autobox;
 with 'Dist::Zilla::Role::MetaProvider';
 
-sub mvp_multivalue_args { qw(folder directory file namespace package) }
+sub mvp_multivalue_args { qw(directories files namespaces packages) }
 
 sub mvp_aliases {
     return {
