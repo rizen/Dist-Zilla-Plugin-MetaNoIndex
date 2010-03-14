@@ -4,8 +4,6 @@ use Moose;
 use Moose::Autobox;
 with 'Dist::Zilla::Role::MetaProvider';
 
-sub mvp_multivalue_args { qw(directories files namespaces packages) }
-
 sub mvp_aliases {
     return {
         dir         => 'directories',
@@ -18,6 +16,8 @@ sub mvp_aliases {
         namespace   => 'namespaces',
     };
 }
+
+sub mvp_multivalue_args { qw(directories files namespaces packages) }
 
 has directories => (
     is          => 'rw',
@@ -58,6 +58,8 @@ sub metadata {
     if ($self->has_namespaces) {
         $no{namespace} = $self->namespaces;
     }
+    use Data::Dumper;
+    warn Dumper \%no;
     return { no_index => \%no };
 }
 
